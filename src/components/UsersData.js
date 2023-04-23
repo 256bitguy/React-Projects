@@ -13,12 +13,12 @@ const UsersData=(props)=> {
   const item=props.arr;
   
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ maxWidth: 200}}  >
+    <TableContainer  >
+      <Table sx={{ maxWidth: "300px"}}  >
       <TableHead>
           <TableRow>
             <TableCell>NAME</TableCell>
-            <TableCell align="right">AGE</TableCell>
+            <TableCell align="center">AGE</TableCell>
              
           </TableRow>
         </TableHead>
@@ -26,12 +26,12 @@ const UsersData=(props)=> {
           {item.map((row) => (
             <TableRow
                
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-               
-              <TableCell align="left">{row.name}</TableCell>
-              <TableCell align="left">{row.age}</TableCell>
-               
+            sx={{ '&:last-child td, &:last-child th': { border: 2 } }}
+          >
+             
+            <TableCell align="left">{row.name}</TableCell>
+            <TableCell align="left">{row.age}</TableCell>
+             
             </TableRow>
           ))}
         </TableBody>

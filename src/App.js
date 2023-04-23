@@ -1,7 +1,7 @@
  import React,{useState} from "react";
 import InputForm from "./components/InputForm";
  import UsersData from "./components/UsersData";
-import './App.css'
+
 function App() {
     
     const [arr1,setarr1]=useState([ ])
