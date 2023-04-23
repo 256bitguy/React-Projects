@@ -1,23 +1,25 @@
  import React,{useState} from "react";
 import InputForm from "./components/InputForm";
-import ListMe from "./components/ListMe";
+ import UsersData from "./components/UsersData";
 import './App.css'
 function App() {
     
-    const [arr1,setarr1]=useState([])
-  const funa=(abc)=>{
-     setarr1([abc, ...arr1])
-    console.log(arr1);
-      
-  }
+    const [arr1,setarr1]=useState([ ])
+  
+    const funa=(name1,age1)=>{
+        const newdata={name:name1,age:age1}
+      setarr1(arr1=>[...arr1, newdata ])
+      console.log(arr1);
+      }
  
-
+   
 
   return (
-    <div className="first" >
-      <h2>Your Task</h2>
+    <div   >
+      <h2>Your Details</h2>
       <InputForm funct={funa}/>
-      <ListMe arr={arr1}/>
+      <UsersData arr={arr1}/>
+      
     </div>
   );
 }
